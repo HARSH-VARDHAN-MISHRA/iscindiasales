@@ -70,40 +70,12 @@ const Header = () => {
                                 <Link  className='for-white' >Our Products</Link>
                                 <ul className={`about-hover hp ${isActiveAbout ? 'active-about-hover' : ''}`}>
                                     <Link onClick={handleDeActiveMenuDropDown} to={'/our-products'}>Pipes & Fittings</Link>
-                                    <Link onClick={handleDeActiveMenuDropDown} to={'/tap-products'}>Taps Collection</Link>
-                                    {/* <Link onClick={handleDeActiveMenuDropDown} to={'/product'}>uPVC Pipes Fittings</Link>
-                                    <Link onClick={handleDeActiveMenuDropDown} to={'/product'}>cPVC Pipes Fittings</Link>
-                                    <Link onClick={handleDeActiveMenuDropDown} to={'/product'}>SWR Pipes Fittings</Link>
-                                    <Link onClick={handleDeActiveMenuDropDown} to={'/product'}>Agriculture (Rigid) PVC Pipes & Fittings</Link>
-                                    <Link onClick={handleDeActiveMenuDropDown} to={'/product'}>Brass & Metal Products</Link>
-                                    <Link onClick={handleDeActiveMenuDropDown} to={'/product'}>Submersible Column Pipes</Link>
-                                    <Link onClick={handleDeActiveMenuDropDown} to={'/product'}>Casing Pipes</Link> */}
+                                    <Link onClick={handleDeActiveMenuDropDown} to={'/tap-products'}>Bath Fittings</Link>
+                                    <Link onClick={handleDeActiveMenuDropDown} to={'/garden-pipes'}>Garden Pipes</Link>
+                                    
                                 </ul>
                             </li>
-                            {/* <li onMouseEnter={handleActiveService} onMouseLeave={handleDeActiveService} className='services-pointer'>
-                                <Link className='for-white'>Services</Link>
-                                <ul className={`services-hover ${isActiveService ? 'active-service-hover' : ''}`}>
-                                    <Link onClick={handleDeActiveMenuDropDown} to={'/fiber'}>Optical Fiber Works</Link>
-                                    <Link onClick={handleDeActiveMenuDropDown} to={'/manufacturing'}>Manufacturing</Link>
-                                    <Link onClick={handleDeActiveMenuDropDown} to={'/telecom'}>Telecom Infrastructure</Link>
-                                    <Link onClick={handleDeActiveMenuDropDown} to={'/solar'}>Solar Services</Link>
-                                    <Link onClick={handleDeActiveMenuDropDown} to={'/project-managment'}>Project Mangament Services</Link>
-                                </ul>
-                            </li>
-                            <li className='career-pointer' onMouseEnter={handleActiveCareer} onMouseLeave={handleDeActiveCareer}>
-                                <Link className='for-white'>Career</Link>
-                                <ul className={`career-hover ${isActiveCareer ? 'active-career-hover' : ''}`}>
-                                    <Link onClick={handleDeActiveMenuDropDown} to={'/why-join'}>Why Join Us</Link>
-                                    <Link onClick={handleDeActiveMenuDropDown} to={'/resources'}>Human Resources & Development</Link>
-                                </ul>
-                            </li>
-                            <li className='client-pointer' onMouseEnter={handleActiveClient} onMouseLeave={handleDeActiveClient}>
-                                <Link className='for-white'>Our Clients</Link>
-                                <ul className={`client-hover ${isActiveclient ? 'active-client-hover' : ''}`}>
-                                    <Link onClick={handleDeActiveMenuDropDown} to={'/client'}>Clients</Link>
-                                    <Link onClick={handleDeActiveMenuDropDown} to={'/presence'}>Our Presence</Link>
-                                </ul>
-                            </li> */}
+                            
                             <li>
                                 <Link className='for-white' onClick={handleDeActiveMenuDropDown} to={'/media-center'}>Media Center</Link>
                             </li>
@@ -119,13 +91,13 @@ const Header = () => {
                         </ul>
                     </nav>
                     <div onClick={handleActiveMenuDropDown} className="menu-bar">
-                        <i class="fa-solid fa-bars-staggered"></i>
+                        <i className="fa-solid fa-bars-staggered"></i>
                     </div>
                 </div>
             </header>
         
             {/* <!-- ----------Whatsapp---------- --> */}
-            <a href="https://api.whatsapp.com/send?phone=919319037605" target="_blank" class="whatsapp_float"><i class="fa-brands fa-whatsapp whatsapp-icon"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=919319037605" target="_blank" className="whatsapp_float"><i className="fa-brands fa-whatsapp whatsapp-icon"></i></a>
 
         </>
         

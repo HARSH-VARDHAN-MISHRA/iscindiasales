@@ -13,57 +13,25 @@ import { useState } from 'react'
 import axios from 'axios'
 
 const ProductCate = () => {
-    // const cateDetails = [
-    //     {
-    //         id:1,
-    //         img: cpvc,
-    //         name: "cPVC Pipes / Fittings"
-    //     },
-    //     {
-    //         id:2,
-    //         img: upvc,
-    //         name: "uPVC Pipes / Fittings"
-    //     },
-    //     {
-    //         id:3,
-    //         img: swrPipes,
-    //         name: "SWR Pipes / Fittings"
-    //     },
-    //     {
-    //         id:4,
-    //         img: agriculturePvc,
-    //         name: "Agriculture (Rigid) PVC Pipes & Fittings"
-    //     },
-    //     {
-    //         id:5,
-    //         img: brassMetal,
-    //         name: "Brass & Metal Products"
-    //     },
-    //     {
-    //         id:6,
-    //         img: submersibleColumn,
-    //         name: "Submersible Column Pipes"
-    //     },
-    //     {
-    //         id:7,
-    //         img: casingPipes,
-    //         name: "Casing Pipes"
-    //     },
-    // ]
 
     const [cateDetails,setCateDetails] = useState([]);
     const handleFetch = async()=>{
         try {
             const res = await axios.get('https://www.api.iscindiasales.co.in/api/v1/get-category')
             setCateDetails(res.data.data)
-            console.log(res.data.data)
+            // console.log(res.data.data)
         } catch (error) {
             console.error(error)
         }
     }
     useEffect(()=>{
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
         handleFetch()
     },[])
+    
   return (
     <>
         <section className="our-categories">

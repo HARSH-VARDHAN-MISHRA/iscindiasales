@@ -18,13 +18,15 @@ import icon12 from './icons/12.png'
 import { Link, useParams } from 'react-router-dom'
 import AllProduct from '../allProduct/AllProduct'
 
-import cutting from './jointMethod/cutting.jpg'
-import chamfering from './jointMethod/chamfering.jpg'
-import deburring from './jointMethod/deburring-and-ridge-removal.jpg'
-import cleaning from './jointMethod/cleaning.jpg'
-import application from './jointMethod/application-of-solvent-cement.jpg'
-import application2 from './jointMethod/application-of-solvent-cement2.jpg'
-import doNot from './jointMethod/do-not-hammer.jpg'
+import cutting from './jointMethod/01.png'
+import chamfering from './jointMethod/02.png'
+import deburring from './jointMethod/03.png'
+import cleaning from './jointMethod/04.png'
+import application from './jointMethod/05.png'
+import application2 from './jointMethod/06.png'
+
+
+// import doNot from './jointMethod/do-not-hammer.jpg'
 import axios from 'axios'
 import ModelPopup from '../ModelPopup/ModelPopup'
 
@@ -102,11 +104,6 @@ const SingleProductPage = () => {
             id: 6,
             img: application2,
             head: "6. Application Of Solvent Cement"
-        },
-        {
-            id: 7,
-            img: doNot,
-            head: "7. Do Not Hammer"
         }
     ];
 
@@ -129,7 +126,7 @@ const SingleProductPage = () => {
         try {
             const res = await axios.get('https://www.api.iscindiasales.co.in/api/v1/get-product')
             const fillterProducts = res.data.data.filter((item) => item.prodCategory === name)
-            console.log(fillterProducts)
+            // console.log(fillterProducts)
             setlitexProducts(fillterProducts)
         } catch (error) {
             console.error(error)
@@ -144,7 +141,7 @@ const SingleProductPage = () => {
       setModelName(modelProName)
       setOpen(true);
     };
-  
+    
     const handleClose = () => {
       setOpen(false);
       setImageModal(null); // Reset imgModel when closing modal
@@ -166,35 +163,20 @@ const SingleProductPage = () => {
             <section className="productDesc">
                 <div className="container">
                     <div className="headLine">
-                        <h3>{name} PIPES FITTINGS</h3>
+                        <h3>{name}</h3>
                         <span className='line'></span>
                     </div>
-                    {/* <div className="row mb-5">
-                        <div className="col-md-8">
-                            {litexCate.length > 0 && (
-                                <>
-                                    <p className='text'>{litexCate[0]?.prodDesc || " op"}</p>
-                                    <p className='text'>{litexCate[0]?.prodDesc1 || " op"}</p>
-                                </>
-                            )}
-                        </div>
-                        <div className="col-md-4">
-                            {litexCate.length > 0 && (
-                                <div className="img">
-                                    <img src={litexCate[0].prodImage} alt="cpvc Pipes" />
-                                </div>
-                            )}
-                        </div>
-                    </div> */}
+                    
                     {litexCate && litexCate.length > 0 && (
                         <div className="row mb-5">
                             <div className="col-md-8">
                             <p className='text'>{litexCate[0].description}</p>
                             <p className='text'>{litexCate[0].description_second}</p>
                             </div>
+                            {/* <div className="col-md-1"></div> */}
                             <div className="col-md-4">
                             <div className="img">
-                                <img src={litexCate[0].categoryImage} style={{maxHeight:'250px', objectFit:'contain'}} alt="Pipes" />
+                                <img src={litexCate[0].categoryImage} style={{minHeight:'15rem', objectFit:'contain'}} alt="Pipes" />
                             </div>
                             </div>
                         </div>
@@ -206,7 +188,7 @@ const SingleProductPage = () => {
                                 <h4>CPVC Pipe & Fittings as per ASTM D -2846</h4>
                                 <span className='line'></span>
                             </div>
-                            <table class="table table-bordered ">
+                            <table className="table table-bordered ">
                                 <thead>
                                     <tr>
                                         <th className='main' colSpan={4}>PIPE SDR-11</th>
@@ -271,16 +253,7 @@ const SingleProductPage = () => {
 
                         </div>
                     </div>
-
-                    {/* --- Icons Grid ---  */}
-                    <div className="row singIco">
-                        {icons.map((item, index) => (
-                            <div className="icon">
-                                <img src={item.img} alt="icon-img" decoding='async' loading='lazy' />
-                            </div>
-
-                        ))}
-                    </div>
+                    
                 </div>
             </section>
             <section className='container mt-5'>
@@ -323,9 +296,9 @@ const SingleProductPage = () => {
             <section className="container">
                 <div className="row">
                     <div className="col-md-6">
-                        <div className="row">
+                        <div className="row joint-method">
                             {jointMethods.map((item, index) => (
-                                <div className="col-md-4 col-6 mb-2" key={index}>
+                                <div className="col-md-4 col-sm-6 col-6 mb-2" key={index}>
                                     <img src={item.img} alt="joint-method-image" className='mb-2' />
                                     <h5 style={{ fontWeight: '400', fontSize: '1rem' }}>{item.head}</h5>
                                 </div>
@@ -354,6 +327,18 @@ const SingleProductPage = () => {
                     </div>
                 </div>
             </section>
+
+            <div className="container mt-5">
+                {/* --- Icons Grid ---  */}
+                <div className="row singIco">
+                    {icons.map((item, index) => (
+                        <div className="icon">
+                            <img src={item.img} alt="icon-img" decoding='async' loading='lazy' />
+                        </div>
+
+                    ))}
+                </div>
+            </div>
             
             <ModelPopup imgModel={imgModel} proName={modelName} onClose={handleClose} />
             

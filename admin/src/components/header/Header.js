@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Header.css'
+import LoginPage from '../../pages/LoginPage/LoginPage'
 
 const Header = () => {
 const [open,setOpen] = useState(false)
@@ -12,7 +13,12 @@ const [SidebarOpen,setSidebarOpen] = useState(false)
 const handleSideBar =()=>{
   setSidebarOpen(!SidebarOpen)
 }
-  
+
+const handleLogOut =()=>{
+  sessionStorage.clear('login')
+  window.location.href = "/login"
+  // return <LoginPage/>
+}  
   return (
     <>
       <nav className="navbar">
@@ -49,32 +55,14 @@ const handleSideBar =()=>{
                 <Link to={''} className="nav_link sublink">Nav Sub Link</Link>
               </ul>
             </li> */}
-            {/* <!-- end -->
-            <!-- duplicate this li tag if you want to add or remove  navlink with submenu -->
-            <!-- start --> */}
-            {/* <li className="item">
-              <div href="#" className="nav_link submenu_item">
-                <span className="navlink_icon">
-                  <i className="bx bx-grid-alt"></i>
-                </span>
-                <span className="navlink">Overview</span>
-                <i className="bx bx-chevron-right arrow-left"></i>
-              </div>
-              <ul className="menu_items submenu">
-                <Link to={''} className="nav_link sublink">Nav Sub Link</Link>
-                <Link to={''} className="nav_link sublink">Nav Sub Link</Link>
-                <Link to={''} className="nav_link sublink">Nav Sub Link</Link>
-                <Link to={''} className="nav_link sublink">Nav Sub Link</Link>
-              </ul>
-            </li> */}
-            {/* <!-- end --> */}
+            
           </ul>
           <ul className="menu_items">
             <div className="menu_title menu_editor"></div>
             {/* <!-- duplicate these li tag if you want to add or remove navlink only --> */}
             
             <li className="item">
-              <Link to={''} className="nav_link">
+              <Link to={'/admin/dashboard'} className="nav_link">
                 <span className="navlink_icon">
                   <i className="bx bxs-magic-wand"></i>
                 </span>
@@ -149,11 +137,11 @@ const handleSideBar =()=>{
           <div className="bottom_content">
             <div className="bottom expand_sidebar">
               <span> LOG OUT</span>
-              <i className='bx bx-log-in' ></i>
+              <i className='bx bx-log-in'onClick={handleLogOut} ></i>
             </div>
             <div className="bottom collapse_sidebar">
               <span> LOG OUT</span>
-              <i className='bx bx-log-out'></i>
+              <i className='bx bx-log-out' onClick={handleLogOut} ></i>
             </div>
           </div>
         </div>

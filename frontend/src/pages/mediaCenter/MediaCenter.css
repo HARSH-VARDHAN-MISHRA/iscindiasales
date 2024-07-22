@@ -1,6 +1,6 @@
 .singleMedia img {
     width: 100%;
-    object-fit: cover;
+    object-fit: fill;
     height: 250px;
 }
 .singleMedia .eventName{

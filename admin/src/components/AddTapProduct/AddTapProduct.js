@@ -83,6 +83,7 @@ const AddTapProduct = () => {
                 <div className="col-md-4">
                   <label for="inputState" className="form-label">Select Category</label>
                   <select id="inputState" onChange={handleChange} value={formData.productCategory} name='productCategory' className="form-select">
+                      <option>Select Category</option>
                     {cate.map((item)=>(
                       <option value={item} >{item}</option>
                     ))}

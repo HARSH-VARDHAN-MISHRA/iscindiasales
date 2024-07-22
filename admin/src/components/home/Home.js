@@ -19,22 +19,30 @@ import EditTapProduct from '../EditTapProduct/EditTapProduct'
 import MediaCenter from '../../pages/MediaCenter/MediaCenter'
 import AddMediaCenter from '../AddMediaCenter/AddMediaCenter'
 import EditMediaCenter from '../EditMediaCenter/EditMediaCenter'
+import LoginPage from '../../pages/LoginPage/LoginPage'
 
 const Home = () => {
+  const Token = sessionStorage.getItem('login')
   return (
-    <div>
+ <>
+    
         <div>
-            <Header/>
+        <div>
+          {Token ? <Header/>:<null/>}
+            
         </div>
         <div className='rightSidebar'>
+
+
             <Routes>
-                <Route path={"/"} element={<Dashboard/>}/>
+                <Route path={"/admin/dashboard"} element={<Dashboard/>}/>
                 <Route path={"/create-category"} element={<AddCategory/>}/>
                 <Route path={"/all-category"} element={<CategoryPage/>}/>
                 <Route path={"/create-product"} element={<AddProduct/>}/>
                 <Route path={"/all-products"} element={<ProductPage/>}/>
                 <Route path={"/edit-category/:id"} element={<EditCategory/>}/>
                 <Route path={"/edit-product/:id"} element={<EditProduct/>}/>
+                <Route path='/login' element={<LoginPage/>} />
 
                 <Route path={"/all-tap-category"} element={<TapCategory/>}/>
                 <Route path={"/create-tap-category"} element={<AddTapCategory/>}/>
@@ -46,9 +54,13 @@ const Home = () => {
                 <Route path={"/media-center"} element={<MediaCenter/>}/>
                 <Route path={"/upload-media-center"} element={<AddMediaCenter/>}/>
                 <Route path={"/update-media-center/:id"} element={<EditMediaCenter/>}/>
+
             </Routes>
         </div>
-    </div>
+        </div>
+   
+    </>
+
   )
 }
 

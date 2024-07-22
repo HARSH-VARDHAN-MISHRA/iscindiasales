@@ -10,6 +10,7 @@ import CategoryPage from '../CategoryPage/CategoryPage'
 import AllProduct from '../../components/allProduct/AllProduct'
 import { Link } from 'react-router-dom'
 import LitexCategory from '../../components/litexCategory/LitexCategory'
+import GardenPipes from '../../components/GardenPipes/GardenPipes'
 
 
 
@@ -34,6 +35,8 @@ const Home = () => {
         <ProductCate/>
 
         <LitexCategory/>
+        <Subhead title="Garden Pipes" para=""/>
+        <GardenPipes/>
         
         <Subhead title="Connect With Us" para="If you have any questions or inquiries, don't hesitate to reach out to our dedicated team."/>
         <ContactForm/>

@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Breadcrumb from '../../components/breadcrumb/Breadcrumb'
 
 const DistributorForm = () => {
+  useEffect(() => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+  }, [])
   return (
     <>
         <Breadcrumb title="Distributor Form" middle={{url:'',text:''}}  last='Distributor Form' />

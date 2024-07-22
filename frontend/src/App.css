@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+
+.tap-product-lines{
+  display: grid;
+}
+.tap-product-lines img{
+  max-height: 250px;
+}
+
+@media only screen and (max-width: 700px){
+  .tabProducts .cateGrid.grid-2{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+@media only screen and (max-width: 420px){
+  .tap-product-lines img{
+    height: 250px;
+  }
+  .tabProducts .contents .flex-d {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}
+
+
+

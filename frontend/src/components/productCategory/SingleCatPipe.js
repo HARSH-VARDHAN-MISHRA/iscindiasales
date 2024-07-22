@@ -4,8 +4,8 @@ import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 const SingleCatPipe = () => {
 
-    const { name } = useParams()
-    console.log(name)
+    const { name } = useParams();
+    console.log("hh", name);
     // get-tap-product
     const [litexCate, setlitexCate] = useState([]);
     const handleFetch = async () => {
@@ -20,11 +20,15 @@ const SingleCatPipe = () => {
         }
     }
     useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
         handleFetch()
-    }, [])
+    }, []);
     return (
         <>
-            <Breadcrumb title="Category Name" middle={{ url: '/tap-products', text: 'Tap Categories' }} last='Category Name' />
+            <Breadcrumb title={name} middle={{ url: '/tap-products', text: 'Tap Categories' }} last='Category Name' />
 
             <section className="container tabProducts">
                 <div className="row">

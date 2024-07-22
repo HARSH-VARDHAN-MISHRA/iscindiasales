@@ -17,6 +17,8 @@ import SingleCatPipe from './components/productCategory/SingleCatPipe';
 import SingleProductPage from './components/SingleProductPage/SingleProductPage';
 import Solutions from './pages/Solutions/Solutions';
 import DistributorForm from './pages/DistributorForm/DistributorForm';
+import GardenPipes from './components/GardenPipes/GardenPipes';
+import GardenPipePage from './pages/GardenPipePage/GardenPipePage';
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
           <Route path='/tap-products' element={<TapProducts/>} />
           <Route path='/tap-products/:categoryName' element={<SingleTapCategory/>} />
           <Route path='/media-center' element={<MediaCenter/>} />
+
+          <Route path='/garden-pipes' element={<GardenPipePage/>} />
 
           <Route path='/solution' element={<Solutions/>} />
           <Route path='/distributor-form' element={<DistributorForm/>} />

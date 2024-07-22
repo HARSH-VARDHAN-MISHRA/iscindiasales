@@ -2,7 +2,7 @@ import React from 'react'
 import './Footer.css'
 import { Link } from 'react-router-dom'
 // import logo from '../header/logo.png'
-import logo from '../../isclogo.png'
+import logo from './isclogo.png'
 
 const Footer = () => {
   return (
@@ -16,10 +16,9 @@ const Footer = () => {
                         </div>
                         <p>Maxfit values are driven by happy customers and growth is recorded in satisfied smiles.</p>
                         <div className="social-links">
-                            <a href="javascript:void(0)"><i className="fa-brands fa-instagram"></i></a>
-                            <a href="javascript:void(0)"><i className="fa-brands fa-facebook-f"></i></a>
-                            <a href="javascript:void(0)"><i className="fa-brands fa-twitter"></i></a>
-                            <a href="javascript:void(0)"><i className="fa-brands fa-whatsapp"></i></a>
+                            <a href="https://www.instagram.com/invites/contact/?i=4pktq1gguihq&utm_content=sbflwik" target="_blank"><i className="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=100089877106287&mibextid=ZbWKwL" target="_blank"><i className="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=919319037605" target="_blank"><i className="fa-brands fa-whatsapp"></i></a>
                         </div>
                     </div>
                     <div className="col-md-4 col-sm-6 mb-3">
@@ -27,6 +26,7 @@ const Footer = () => {
                         <ul>
                             <li><Link to={'/our-products'}>Pipes & Fittings</Link></li>
                             <li><Link to={'/tap-products'}>Taps Collection</Link></li>
+                            <li><Link to={'/garden-pipes'}>Garden Pipes</Link></li>
                         </ul>
                     </div>
                     <div className="col-md-2 col-sm-6 mb-3">

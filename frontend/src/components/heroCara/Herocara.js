@@ -7,9 +7,9 @@ import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 import b1 from './banner-1.jpg'
-import b2 from './banner-2.jpg'
+import b2 from './banner-2.png'
 import b3 from './banner-3.jpg'
-import b4 from './banner-4.jpg'
+// import b4 from './banner-4.jpg'
 
 const Herocara = () => {
     const imgs = [
@@ -24,10 +24,6 @@ const Herocara = () => {
         {
             id:3,
             img: b3
-        },
-        {
-            id:4,
-            img:b4
         }
     ]
   return (

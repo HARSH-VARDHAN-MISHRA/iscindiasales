@@ -9,12 +9,11 @@ const AboutImg = () => {
     <>
         <section className="about container">
             <div className=" row">
-                <div className="col-md-4">
-                    <img src={img} alt="about-image"  />
+                <div className="col-md-5">
+                    <img src={img} className='mt-4 col-mt-2' alt="about-image"  />
                 </div>
-                <div className="col-md-1"></div>
                 <div className="col-md-7">
-                    <img src={logo}  alt="maxfit-logo" className='maxfit-logo' />
+                    <img src={logo}  alt="maxfit-logo" className='maxfit-logo mb-2' />
                     <h3 className="underline-head">Make Your <span>Dream Home</span> Come True</h3>
                     <p className='text'>This is the story of a team that followed an in- novation and uncompromised Quality. ISC has been relentless in it's commitment to Quality and service since 2018. </p>
                     <p className='text'>The leader in the cPVC Pipes and Fittings is ISO 9001:2015 certified company, the company employees latest processess and techniques to manufacture quality Pipes and Fittings. Qualified and highly experienced workforce and stringent processes and systems ensure pro- ducts are the finest in the industry in terms of Quality and Performance.</p>

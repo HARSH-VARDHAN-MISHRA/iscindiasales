@@ -11,12 +11,16 @@ const TapProducts = () => {
         try {
             const res = await axios.get('https://www.api.iscindiasales.co.in/api/v1/get-tap-category')
             setlitexCate(res.data.data)
-            console.log(res.data.data)
+            // console.log(res.data.data)
         } catch (error) {
             console.error(error)
         }
     }
     useEffect(()=>{
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
         handleFetch()
     },[])
   return (

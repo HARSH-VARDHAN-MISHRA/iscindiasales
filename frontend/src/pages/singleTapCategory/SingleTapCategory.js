@@ -21,19 +21,23 @@ const SingleTapCategory = () => {
         }
     }
     useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
         handleFetch()
     }, [])
     return (
         <>
-            <Breadcrumb title="Category Name" middle={{ url: '/tap-products', text: 'Tap Categories' }} last='Category Name' />
+            <Breadcrumb title={categoryName} middle={{ url: '/tap-products', text: 'Tap Categories' }} last={categoryName} />
 
-            <section className="container tabProducts">
+            <section className="container tabProducts ">
                 <div className="row">
-                    <div className="cateGrid">
+                    <div className="cateGrid grid-2">
                         {litexCate && litexCate.map((item, index) => {
                             return (
 
-                            <div key={index} className="singleProduct">
+                            <div key={index} className="singleProduct tap-product-lines">
                                 <img src={item.prodImage} alt="product-image" />
                                 <div className="contents">
                                     <div className="heading">{item.productHeadpara || "  "}</div>
